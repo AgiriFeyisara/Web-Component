@@ -67,65 +67,57 @@ p {
   border-radius: 8px;
 }
 .progress-bar {
-  width: 33%;
+  width: 0%;
   height: 8px;
   background-color: #8686c1;
   border-radius: 8px;
 }
-.progress-text {
+#progressPercentage {
   text-align: center;
   margin-top: 5px;
   color: #bdbddd;
   font-size: 10px;
 }
-form {
-  margin-top: 20px;
-}
-label {
-  position: relative;
-  display: flex;
-  gap: 12px;
-  cursor: pointer;
-  margin-left: -8px;
+.checkbox-container {
   margin-bottom: 22px;
 }
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
 
-label input {
-  visibility: hidden;
-  appearance: none;
-}
-label span {
+.checkbox-container label {
   position: relative;
-  width: 17px;
-  height: 17px;
-  border: 1px solid #b8b8b8;
-  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 25px;
 }
-/*ul li */
-label span:before {
+.checkbox-container label:before {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 4px;
-  width: 8px;
-  height: 3px;
-  border-left: 1.5px solid #fff;
-  border-bottom: 1.5px solid #fff;
-  transform: rotate(-40deg);
+  left: 0;
+  top: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1px solid #b8b8b8;
 }
-label p {
-  color: #c8c8f3;
-}
-.tick-background {
-  border: none;
+.checkbox-container input[type="checkbox"]:checked + label:before {
   background-color: #b5ea81;
 }
-.last-child {
-  border-bottom: 1px solid #e5e5f5;
-  padding-bottom: 20px;
+.checkbox-container input[type="checkbox"]:checked + label:after {
+  content: "\2713";
+  font-size: 14px;
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  color: #fff;
+}
+label {
+  color: #c8c8f3;
+  font-size: 12px;
 }
 .footer {
-  margin-top: -15px;
+  margin-top: -3px;
 }
 .footer p {
   color: #b8b8b8;
@@ -157,6 +149,10 @@ label p {
 }
 .lilac {
   background-color: #b3b3ef;
+}
+.last-child {
+  border-bottom: 1px solid #e5e5f5;
+  padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 350px) and (max-width: 700px) {
